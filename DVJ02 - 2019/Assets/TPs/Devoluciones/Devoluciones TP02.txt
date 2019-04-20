@@ -1,0 +1,158 @@
+TPs
+General
+Importancia del enunciado. Testear que cumpla todas las condiciones.
+Orden en el Hierarchy, Cosas que son de Nivel en su GO de nivel, etc.
+Que hacer con el Codigo comentado en desuso?
+GetComponent<>() GameObject.FindGameObjectWithTag("") GameObject.Find() en Update No
+Uso de variables temporales
+Propagación de OnTriggerEnter
+
+Estructura General de un juego.
+Magic numbers no! setear desde el editor.
+No single line ifs. (standard C#)
+Nombres claros de variables, clases y métodos. Diferencia entre Pin y Pins
+llaves en nueva linea
+Metodos y Clases en CamelCase
+Usar script aparte para la UI
+No poner mas de un collider por GO
+
+
+
+Cristian Cusumano
+    TP02 - Hacer
+    :(
+
+Federico van Gelderen
+    TP02 - Aprueba
+
+    float[] posX = new float[9] { -2.12f, -1.69f, -1.06f, -0.53f, 0f, 0.53f, 1.06f, 1.69f, 2.12f };
+    Magic numbers everywhere
+    Ademas, por una clase Pins y no Pin? 
+    
+    for (int i = 0; i < 10; i++)
+    en vez de ese 10 por todos lados porque no tener una variable que se encargue de eso.
+    
+    
+    ball=GameObject.Find("ball"); 
+    ????
+    
+    Ball.cs
+    Uso del inspector para definir valores y no harcodearlos en el codigo.
+    La bola no debería ser la que resetea los pinos sino el PinManager.
+    ResetBall debería ser ResetLevel y estar en otro lado.
+        
+    Estrucura de los scripts. Primero el Awake o Start
+    
+    Representación del nivel. Basicamente esta volando :|
+    
+    Nombre de la Escena
+    
+Franco Vega
+    TP02 - Aprueba
+    
+    Los pinos tienen la misma masa que la pelota? funciona a lo flipper.
+    Camara salta de posicion
+    
+    Piso.cs
+    Mucho codigo comentado. Eliminar lo innecesario o ponerlo en otro lado mas ordenado.
+    
+    PillarTrigger.cs
+    Los pilares no deberían setear cosas de la pelota.
+    
+    Pilar.cs
+    puntaje.GetComponent<Puntos>().pinos = puntaje.GetComponent<Puntos>().pinos - 1;
+    puntaje.GetComponent<Puntos>().allPoints = puntaje.GetComponent<Puntos>().allPoints + 10;
+    Uso de variables temporales.
+    
+    LanzarPelota.cs
+    void FixedUpdate()
+    {
+        if (useGravity) rig.AddForce(Physics.gravity * (rig.mass * rig.mass), ForceMode.Force);
+    } 
+    Concepto de lanzar la pelota una sola vez en vez de agregarle fuerza constantemente.
+    La pelota no debería controlar la camara sino que la camara sigue a la pelota.
+    
+Ivan Castellano
+    TP02 - Arreglar
+    
+    Clases en CamelCase
+    La pelota no se mueve.
+    
+    ball.cs
+    Mover la pelota pa los costados con transform.position y no con addForce()
+    
+    impulseSpeed+=impulseSum;
+    if(impulseSpeed >= maxImpulseSpeed) {
+        while(impulseSpeed > minImpulseSpeed) {
+            impulseSpeed -= impulseSum;
+        }  
+    }    
+    ??? GUAT ???
+    
+    camLimit.cs
+    NO, el stop debe ser manejado por el script de la camara.
+    
+    destroyItSelf.cs
+    No se que viene a ser esto.
+    
+    pin.cs
+    La condicion de pino caido está mal. Quaternion.Angle devuelve el mayor ángulo posible.
+    
+    No usar corutinas hasta que no las veamos en clase. Usar Invoke() para retrasar un llamado a un método.
+   
+Julián Serulnikov
+    TP02 - Arreglar
+    
+    Solo puedo tirar la bola una sola vez.
+    
+    Sacar el Scr de todos los archivos de script.
+    
+    No poner mas de un collider por GO
+    
+    los switch(mode) no son claros. Usar enums en caso de ser necesarios.
+    
+    CameraScr.cs 
+    Magic numbers.
+    
+    ExplosionScr.cs pa que está?
+    
+    Nombre de la Escena
+    
+Mariano Ariel Martinez   
+    TP02 - Aprueba
+    
+    Magic Numbers
+    
+    triggerCol.cs
+    Esto lo debería checkear la bola
+    
+    powerBar.cs
+    Esto lo podría setear un clase general de UI junto con los textos
+    
+Patricio Di Lauro
+    TP02 - Arreglar
+    
+    Solo puedo tirar una vez.
+    Tira un NullReference cuando cae la bola fuera del piso.
+    
+    xd.cs
+    XD WTF?
+    
+    pinoCollision.cs?
+    
+    hacerPinos.cs
+    Para que los metes en un struct? para que existe ese struct
+    
+    colisiones.cs
+    Se usa ese sript?
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    

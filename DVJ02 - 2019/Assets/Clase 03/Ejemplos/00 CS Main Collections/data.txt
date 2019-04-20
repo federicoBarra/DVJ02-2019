@@ -1,0 +1,6 @@
+C#
+https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/
+
+C# Collections
+
+https://programmingwithmosh.com/net/csharp-collections/
