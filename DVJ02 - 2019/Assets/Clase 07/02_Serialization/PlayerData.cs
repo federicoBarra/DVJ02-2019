@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DVJ02.Clase06
+namespace DVJ02.Clase07
 {
     [Serializable]
     public class PlayerData

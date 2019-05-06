@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace DVJ02.Clase06
+namespace DVJ02.Clase07
 {
 public class SOUser : MonoBehaviour
 {

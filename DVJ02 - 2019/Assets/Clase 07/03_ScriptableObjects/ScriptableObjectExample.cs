@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace DVJ02.Clase06
+namespace DVJ02.Clase07
 {
 [CreateAssetMenu(fileName = "ScriptableObjectExample", menuName = "Clase DVJ02/ScriptableObjectExample" + "", order = 1)]
 public class ScriptableObjectExample : ScriptableObject

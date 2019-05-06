@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-namespace DVJ02.Clase06
+namespace DVJ02.Clase07
 {
 [Serializable]
 public class PlayerStats
