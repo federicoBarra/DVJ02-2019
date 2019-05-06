@@ -1,0 +1,398 @@
+Devoluciones:
+
+General:
+NO meter assets pesados que no usen.
+Scripts de UI con el UI adelante
+Separar código de UI de los diferentes objetos.
+Uso de Debug Tools.
+Responsabilidad de clases: Efecto de las cosas se aplican sobre clase principal. 
+    Ejemplo: Una bala no le dice al player que tiene 5 puntos menos de vida sino es el player el que checkea contra que bala chocó.
+
+No dejar las samples scenes que vienen con los standard assets.
+Cachear los GetComponent(). Sobretodo para el Update()
+Magic numbers.
+
+
+
+Ivan Castellano
+=============
+
+TP03 - Aprueba
+====
+
+    Enfocar en los puntos del tp antes que en el chimi.
+    
+    Ver porque el player teblequea a lo loco en ciertos momentos, pa arriba y pa abajo.
+    
+    Boton de exit? que pasa que no funca
+    
+    Modelos que no uso en el juego
+    
+    La idea era que las trampas esten por fuera de las plantillas
+
+Player.cs
+    No manejar la UI desde el player.
+    
+    GetComponent<Rigidbody>() porque no cachearlo?
+    
+    if (life >= 0f)
+    {
+        life -= dmg;
+    }
+    if (life < 0f)
+    {
+        life = 0f;
+    }
+    Como se simplifica eso?
+
+Score.cs
+    prefijo UI
+    uso de Tostring en Update.
+    
+    ButtonsFunctions.cs
+    ButtonsFunctions??? que nombre sería mejor.
+
+Gun.cs
+    Nombre mas especifico, que tipo de arma?
+    
+    Separar UI
+    
+    if (munitionToLoad >= defaultBullets)
+    {
+        bulletsToShoot = defaultBullets;
+        munitionToLoad -= defaultBullets;
+        reloadText.SetActive(false);
+        //Call sound FX
+        AudioManager.Instance.Play("reload");
+        batteryOfGun.SetBool("reloaded", true);
+    }
+    else
+    {
+        bulletsToShoot = munitionToLoad;
+        munitionToLoad = 000f;
+        reloadText.SetActive(false);
+        //Call sound FX
+        AudioManager.Instance.Play("reload");
+        batteryOfGun.SetBool("reloaded", true);
+    }
+    
+    Codigo repetido se puede sacar del if.
+    
+MapGenerator.cs
+    //Adding all the terrains randomly to a map list all with pos 0,0,0. And setActive(false)
+    for (int t = 0; t < totalPlanes; t++) 
+    {
+        if (t == 0) //This spawn 100% a clean platform in the 0,0,0 position to keep the player safe of overlapping
+        {
+            //Here in the first position of the list you can add a started platform for the player if u want
+            map.Add(Instantiate(typesOfTerrain[0], typesOfTerrain[0].transform.position, Quaternion.identity));
+        }
+        //Then add random stuff to the map
+        else 
+        {
+            int randPrefab = (int)(Random.Range(1f, typesOfTerrain.Count));
+            map.Add(Instantiate(typesOfTerrain[randPrefab], typesOfTerrain[randPrefab].transform.position, Quaternion.identity));
+            map[t].SetActive(false);
+        }
+        //Make child of map generator just to by more cleany
+        map[t].transform.parent = transform;
+    }
+    
+    if (t == 0) Para que? ponerlo afuera del for cuando es asi.
+    
+    CreateMap() Como harías para hacer esos 2 for en uno solo. 
+    
+    Porque separás el agregado a la lista del posicionado en el nivel?
+
+GameManager.cs
+    return en el awake
+    
+    void Update()    
+    {
+        if (gameOver) 
+        {
+            Invoke("GameOverScene", 1f);
+            gameOver = false;
+        }
+    }
+    Porque no hacer un metodo EndGame() y llamar a eso en vez de estar preguntando todos los frames si termino el juego.
+    
+AudioManager.cs
+    de nuevo return en el awake.
+    
+TrapNeedle.cs
+    Una posibilidad sería que sea el player el que define que le hizo daño la trampa.
+    
+Target.cs
+    FindObjectOfType<GameManager>().score += points;
+    Acceder mediante un metodo en el peor de los casos.
+    
+TP05 - Arreglar
+====
+
+    Leer enunciado de controles
+    De nuevo te estas enfocando en el chimi antes que los puntos importantes del juego.
+    
+    
+Pato Di Lauro
+=============
+
+TP 03 - Aprueba
+=====
+
+    Leer bien el enunciado.
+    
+    Nivel randomico 20x20 mal.
+    
+    Logos?
+    
+    Organizacion de la Hierarchy.
+    
+    Prints en la consola al correr el juego
+    
+    
+WorldGenerator.cs
+    Magic numbers
+    
+UpdateScoreText.cs
+    Seteo de score en el Update()
+    
+TrapGen.cs
+    GAURDA que estas modificando el prefab
+    aux = (int)GameObject.Find("WorldGen").GetComponent<WorldGenerator>().Width;
+    No entiendo esto
+    Ver en clase 
+    
+TrapDestroyer.cs
+    ?
+    
+TrapCollision.cs
+    No seria mejor tener todo en una clase Trap y ya?
+    GetComponent<Rigidbody>().isKinematic = true; ???????? que e lo que es esto?
+    
+SetIG.cs
+    No se que es esto.
+
+PlayerLife.cs
+    if (transform.position.y < -5)
+    {
+        vida = 0;
+    }
+    GUAT?
+    
+GameManager.cs
+    SetGO(bool g)????
+    
+    
+TP 05 - Arreglar
+=====
+
+PlaneController.cs
+    No funca como es esperado
+
+EnemyBehaviour.cs    
+    Ver en clase.
+    
+    
+Mariano Martinez
+================
+
+TP 03 - Aprueba
+=====
+    
+    Organizacion de la Hierarchy.
+    Uso de Standards de C# (ej: PascalCase en clases.)
+    
+button.cs
+    no, buscar un nombre bien.
+    
+fantasma.cs
+    Setea los valores en el inspector de editor, no desde el Start.
+    
+gun.cs
+    Cachear GetComponents que ensucian el codigo.
+    
+    hit.transform.gameObject.GetComponent<fantasma>().health= hit.transform.gameObject.GetComponent<fantasma>().health-gunDamage;
+    Linea gigante. uso del operador -=
+    
+    UIMan.GetComponent<UIManager>().crosshair.color = Color.green;
+    Llamado a método en vez del seteo directo.
+
+LevelCreator.cs
+    Separar el concepto de manager de nivel del de manager de los fantasmas.
+    
+    En el Start(). Uso de listas o arrays para manejar todo eso sin un switch.
+    Estas usando un for medio al dope. Por que estas haciendo eso con las posiciones. Explicar.
+
+Manager.cs
+    Guarda con esas variables publicas que se acceden de todo el juego.
+    
+Player.cs
+    De nuevo setea los valores en el inspector de editor, no desde el Start.
+    
+    if (col.gameObject.name=="pinxos"||col.gameObject.name=="pinxos(Clone)")
+    NO. Que tengan un solo nombre esos objetos. (le podes setear el nombre cuando los creas)
+    El uso de un tag sería más limpio.
+    
+UIFinalScene.cs
+    Cacheo de pointsNum.GetComponent<Manager>()
+    
+UIManager.cs
+    if (healthBar.value == 0)
+    que pasa si de casualidad el value quedó menor a 0???
+    
+TP 05 - Aprueba
+=====
+
+    De nuevo setea los valores en el inspector de editor, no desde el Start.
+    Los aviones enemigos son un toque violentos no?
+    MissingReferenceException: The object of type 'GameObject' has been destroyed but you are still trying to access it. Your script should either check if it is null or you should not destroy the object.
+    Cuando muero.
+
+Buttons.cs
+    De nuevo, buscar nombre coherente.
+
+EnemyExplosion.cs y Explosion.cs
+    gameManager.GetComponent<GameManager>().enemiesDestroyed++;
+    gameManager.GetComponent<GameManager>().enemiesLvl--;
+    gameManager.GetComponent<GameManager>().points += 200 ;
+    Guarda con controlar el GameManager desde la explosion del enemigo.
+    
+GameManager
+    if (enemiesLvl==0&&level==1)
+    Uso de espacios para facil lectura.
+    
+    Veamos ese Update en clase.
+    
+PlaneGun.cs
+    Que viene a ser esto?
+    
+
+Julián Serulnikov
+================
+
+TP 03 - Aprueba
+=====
+    
+   Seteo de strings en los Updates
+   Prints constantes en la consola.
+   
+CharacterSrc.cs
+    Cachear transform.GetChild(0)
+    
+GameManagerScr.cs
+    Por que instanciar las cosas en el Update y no en el Start?
+    
+EnemyScr.cs
+    if (transform.position.y >= 6)
+    {
+        Destroy(this.gameObject);
+    }
+    ?????
+    
+TP 05 - Arreglar
+=====    
+    Viene bien. Terminar
+    
+Federico van Gelderen
+================   
+    
+TP 03 - Aprueba
+=====
+    
+    Organizacion de la Hierarchy.
+   
+StartButton.cs
+    Buscar mejor nombre
+    
+LevelCreator.cs
+    El nombre da a entender que crea el mundo y nada mas.
+    Que esta haciendo ese Update()?
+    Y si las trampas las maneja un enemy manager o algo asi?
+     
+TP 05 - Aprueba
+=====       
+
+    Un poquito dificil de entender si estoy matando al avion enemigo o no.
+    Prints constantes en la consola.
+
+StartButton.cs
+    Nombre
+
+UIManager.cs
+    Manager de la UI de que? el juego entero? Ingame?
+    
+GameManager.cs
+    Ese Update() huele mal. Como simplificarías ese código.
+    
+CameraManager.cs
+    Instantiate<GameObject>(ExplosionCamera, actualPos + new Vector3(0, YDistanceFromExplosion, 0),ExplosionCamera.transform.rotation);
+    A esto le falta un poquito de onda.
+    
+SpaceShip.cs
+    Setea los valores en el inspector de editor, no desde el Start.
+    Explicar ese GetInput.
+    Gun.Attack()?
+    
+MachineGun.cs
+    Explicar toda esta clase. Buscar una forma más simple de hacerla.
+    
+Enemy.cs
+    if(dot<=0)
+    {
+        return false;
+    }
+    else
+    {
+        return true;
+    }
+    ????
+    
+    Esta raro el movimiento del Enemy, explicar un poquito.
+    
+Franco Vega
+================   
+    
+TP 03 - Aprueba
+=====    
+
+    Evitar oneliners
+    Organizacion de la Hierarchy.
+    
+    Tu UI esta controlando la energía del player. O sea, la UI dice cuando se muere el player.
+    
+UIFade.cs
+    Evitar news constantes de Color. instanciarlo una vez y despues solo modificarlo
+    
+AcidFloor.cs
+    El respawneo quizas podría estar manejado por una especie de spawner manager y no por el mismo objeto.
+ 
+Ghost.cs
+    Explicar en clase. Ayudaría un FSM aca? como se podría mejorar esa serie de if en el Update()
+
+RandomLevel.cs
+    Nombre mas claro. La idea era hacer una grilla. Como lo modificarías.
+    Explicar en clase. Ver como se puede mejorar.
+   
+PlayerPoints.cs
+    Como ponía arriba sobre la UI controlando tu health. No convendría mas tener una clase Player general que tenga points y health? 
+
+ActiveWeapon.cs
+    Que pasa si tengo 3 armas? que pasa si tengo 100? Pensar como lo implementarias.
+    
+GhostHunter_ball.cs
+    Nombre de clase
+    
+TP 05 - Aprueba
+===== 
+
+    NullReferenceException: Object reference not set to an instance of an object EnemyAircraftCollision.OnTriggerEnter (UnityEngine.Collider collider) (at Assets/Scripts/Gameplay/Enemy/EnemyAircraftCollision.cs:35)
+    Cuando muero.
+    
+CurrentWeapon.cs
+    Igual tp anterior
+    
+    No llego a verlo. Veamoslo en clase.
+    
+
+   
