@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace DVJ02.Clase05
 {
-public class EnemyAIFSM : MonoBehaviour
+    public class EnemyAIFSM : MonoBehaviour, IPointerEnterHandler
 {
     public enum EnemyState
     {
@@ -62,6 +63,11 @@ public class EnemyAIFSM : MonoBehaviour
     private void SetState(EnemyState es)
     {
         state = es;
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        Debug.Log("ENtER");
     }
 }
 }

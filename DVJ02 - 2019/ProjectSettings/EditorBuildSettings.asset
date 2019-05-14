@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Clase 05/Ejemplos/04_PlayerPrefs/PlayerPrefs scene.unity
     guid: 224c9166b4e24424f8b2d69c11af3fc2
+  - enabled: 1
+    path: Assets/Clase 08/02_Corutinas/LoaderManager/Loader 01.unity
+    guid: 3fa8aa0b4a0af65488a3b59b5b28cab5
+  - enabled: 1
+    path: Assets/Clase 08/02_Corutinas/LoaderManager/Loader 02.unity
+    guid: 94e96842819e8bf42954f3bf4285f811
   m_configObjects: {}
