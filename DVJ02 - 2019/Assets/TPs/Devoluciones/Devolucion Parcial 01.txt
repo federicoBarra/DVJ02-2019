@@ -1,0 +1,356 @@
+Parcial 01
+
+Todos:
+Atenti a la prolijidad de codigo y las responsabilidades de cada objeto. De ahora en más serán evaluados fuertemente.
+
+Uso de imagenes en la UI en vez de texto
+Estructura de carpetas en el Proyecto
+En general los objetos no deberían decirle a la UI lo que tiene que hacer. Pensar en reuso de código.
+Objetivo de la clase Loader.
+Uso de variables locales para simplificacion de lectura de código.
+Especificar cual es la escena a correr primero.
+Si van a usar un singleton usar la clase que vimos MonoBehaviourSingleton
+Guarda con el copy paste de codigo varias veces. Es síntoma de que eso se puede mandar a un método.
+Cuando el enunciado se refiere a que hay cosas que se modifican desde editor quiere decir desde codigo que ustedes hicieron.
+
+
+
+Ivan =============================================================================================================
+El nivel se genera en Unity y no cuando se carga el nivel.
+Porque todo en Carpeta Resources?
+
+Cantidad de enemigos tiene que modificarse a mano en el nivel.
+
+Movimiento de los enemigos es medio zarlanga.
+
+UILoadNextLevel???
+
+UIGameplayManager
+si tengo 5 vidas como haces con el codigo?
+
+Bombs
+El timer debería estar en la bomba y no en el player
+player.currentBombs++; la bomba le dice al player?
+UIManager.RefreshBombUI(player); la bomba le dice a la UI?
+Destroy (gameObject); //Destroy the actual bomb in 0.3 seconds, after all coroutines have finished  ???? donde estan los 0.3 segundos???
+
+Cuando el player esta encima de la bomba esta está en modo trigger para los enemigos tambien...
+
+ScoreManager
+Se podría hacer uso de interfaces para los scores.
+El manager le esta diciendo a la UI lo que tiene que hacer.
+
+ScenesManager y LoaderManager
+Estos 2 deberían estar unidos. Es el loader el que carga las escenas.
+
+EnemyManager
+Debería controlar la cantidad de enemigos y el spawneo de estos en el nivel.
+De nuevo vinculacion con la UI.
+
+Player
+if (currentBombs > 0)
+        {
+            if (canDropBombs && Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+            {
+                currentBombs--;
+                PlayerDropBomb();
+            }
+        }
+Conceptualmente este if debería estar invertido.
+
+Vector3 roundPos = new Vector3(
+        Mathf.RoundToInt(myTransform.localPosition.x),
+        myTransform.localPosition.y,
+        Mathf.RoundToInt(myTransform.localPosition.z));
+        Vector3 roundedFinalPos =  Vector3.Lerp(myTransform.localPosition, roundPos,snapSpeed * Time.deltaTime);
+        myTransform.localPosition = roundedFinalPos;
+Esto es un choclo.
+		
+Portal
+De nuevo playerIsOnPortal que checkea constantemente desde el gameManager. Además, Esto debería estar en el player. Que le importa al portal si alguien lo pisó?
+
+MapEditor
+Muy lindo
+De nuevo: uso de variables temporales.
+
+Enemy
+Uso de FSM
+
+
+Cristian =============================================================================================================
+
+El player se traba con las cajas. Es bastante incontrolable tambien.
+Magic numbers
+Usar variables temporales
+
+PlayerMovement
+Choclo. Ver en clase.
+
+CreateWall
+Ver en clase.
+
+UIStartButton
+Debería llamarse MainMenu o algo asi.
+OnClick() no. Nombre de lo que hace el método, no de como se invoca.
+
+UIGameOver
+la UI instancia el GameManager si este no existe?
+
+Enemy
+Uso de variables temporales.
+
+TriggerExplosion
+Este objeto le está diciendo a todos los otros objetos lo que tiene que hacer
+
+InstanceExplosion
+void Update()
+{
+	StartCoroutine("TimeBomb");
+Todos los frames está llamando a esa corutina.
+Checkeo constante de if(onExplosion)
+
+InstanceBomb
+Porque no esta en el player esto?
+
+Platform
+La plataforma le dice al player cuando terminó el nivel
+
+Pato =============================================================================================================
+
+Lo enemigo cuando se chocan con las bombas se las quieren llevar por delante
+Porque las entidades tiene masa drag, y angular drag de 10000? 
+
+En algún momento el Loader cargaba hasta 10% y empezaba el juego
+
+
+UIMenuCanvas
+PlayButton = canvas.transform.Find("Panel").Find("PlayButton").GetComponent<Button>();
+QuitButton = canvas.transform.Find("Panel").Find("QuitButton").GetComponent<Button>();
+Arrastralos del editor y te ahorras eso.
+
+UIGameOverCanvas
+De nuevo los finds
+Si ya sabes que esos objetos van a estar porque no los referencias directo del Editor.
+playAgainButton.onClick.AddListener(PlayAgain); Lo mismo. Podrías usar el OnClick en el inspector.
+
+public static Text score; GUAT!?
+
+
+UILoadingScreen
+Porque no usar el MonoBehaviourSingleton que vimos?
+
+GameManager
+Esto controla el juego, la UI, Highscores y un par de variables estáticas de diferentes lugares. NO!
+Separar diferentes funcionalidades en donde deben estar.
+
+DoorBehaviour
+La puerta le esta diciendo al juego cuando terminó?
+Variables poco claras
+
+DestroyableWallGenerator
+if ((x % 2 != 0 || (x % 2 == 0 && z % 2 != 0))
+	&& r > 7 && destroyableWallsCount < 100 && (x!=13 || z!=14)
+	&& (x>5||z>5) && (x< 20 || z<20) && (x >5 || z <20) && (x < 20 || z > 5))
+					
+	NO
+MakeDestroyableWalls() arreglar en clase.
+	
+TriggerFunctionality y PlayerController
+Explicar en clase. Es un quilombo.
+
+EnemySpawner
+Uso variables temporales.
+
+EnemyBehaviour
+FSM zarlanga.
+eS.UpdateCantEnemies(); el enemy le esta diciendo al spawner lo que tiene que hacer?
+
+BombBehaviour
+La bomba es una especie de singleton? que pasa si puedo poner 2 bombas?
+
+BombPositionTrigger
+Que viene a ser esto? lo que snapea la bomba?
+
+Julian =============================================================================================================
+
+No se ve el loading.
+Coding Standards?
+La hierarchy es un quilombo.
+
+Player
+Esos 4 chunks de codigo de movimiento son muy similares. Como podrían separarse en un método que los generalice?
+
+Enemy
+Se podría combinar de con el movimiento del player, no?
+
+Spawner
+while (!spawnBox(position = new Vector3(Random.Range(Mathf.FloorToInt(transform.position.x), Mathf.FloorToInt(transform.position.x) + xLimit) + 0.5f,
+                    0.5f,
+                    Random.Range(Mathf.FloorToInt(transform.position.z), Mathf.FloorToInt(transform.position.z) + zLimit) + 0.5f)))
+?
+Uso de variables temporales.
+No hacer depender un while de un random.
+Pensar como hacer esto de los whiles de una manera que se entienda y que no dependan de los randoms.
+
+Door
+La puerta dice cuando terminó el juego?
+
+GameManager
+switch (currentScene.name)
+        {
+            case "game":
+			
+Ojo con eso.
+
+Mariano =============================================================================================================
+
+Uso de Iconitos pa la UI (en vez de texto)
+A veces los enemigos se spawnean abajo de cajas destruibles.
+
+UIGameManager
+Quizas se podría llamar HUD o Ingame
+
+UIFinalScene
+Destroy(gameManager); por?
+        
+menu.onClick.AddListener(GoToMenu);
+quit.onClick.AddListener(Quit);
+porque lo agregaría por codigo cuando lo puedo agregar por Unity?
+
+PlayerController
+como se podría sacar ese codigo duplicado a un metodo?
+bomb es un prefab no? => bombPrefab
+
+Porque hay una clase Player o otra PlayerController?
+
+Bomb
+StartCoroutine(EnableCollision(1)); ñaca ñaca
+
+WallsGenerator
+void Start()
+{
+	posMin = -9;
+	posMax = 9;
+	cantWalls = 30;
+	trap = 10;
+}	
+Ya hablamos de esto.
+
+
+DestroyableWall
+gameManager.points += wallPoints; 
+delegates?
+
+Enemy
+de nuevo
+como se podría sacar ese codigo duplicado a un metodo?
+Porque hay una clase Enemy o otra EnemyController?
+
+De hecho, pareciera ser que el movimiento de Player y Enemy es muy similar, no? como podría generalizarce eso para que los 2 hereden de un objeto que les maneje el movimiento básico.
+
+Fede =============================================================================================================
+
+Cada tanto aparecen unos errores.
+NullReferenceException: Object reference not set to an instance of an object
+UIMenu.Awake () (at Assets/Scripts/UI/UIMenu.cs:18)
+
+Spawner
+do
+{
+	pos = new Vector3(Random.Range((int)Floor.bounds.min.x, (int)Floor.bounds.max.x - FloorOffset) + PathAlignment,
+									Floor.bounds.center.y + go.transform.localScale.y / 2,
+									Random.Range((int)Floor.bounds.min.z, (int)Floor.bounds.max.z - FloorOffset) + PathAlignment);
+} while (!IsPositionCorrect(pos, PositionsTaken, go) || !IsDistanceCorrect(go,pos));
+GUAT?
+Uso de variables temporales.
+No hacer depender un while de un random.
+
+UILoadingScreen
+Usemo el MonoBehaviourSingleton si ya lo tenemos no?
+
+UIGameOver
+if (!GameManager.Instance)
+{
+	gameManager = new GameManager();
+}
+else
+{
+	gameManager = GameManager.Instance;
+}
+GUAT? La UI me esta diciendo si creo el GameManager o no?
+
+LevelManager
+Tiene sentido esta clase?
+
+GameManager
+MonoBehaviourSingleton
+
+EnemyManager
+Si ya estas usando un delegate para KillEnemy porque desde ahi llamas al GameManager? porque no agarrarte de ese delegate en el GameManager y ya?
+
+Enemy, Character y Player. Bomb
+como se podrían simplificar esos codigo duplicado y pasarlos a diferentes métodos?
+
+Door
+La puerta dice que el juego terminó?
+
+DestWallsSpawner
+que es "dest"? ta en alemán eso?
+
+Frank =============================================================================================================
+
+Hierarchy
+Uso de Iconitos pa la UI (en vez de texto)
+Porque no usaste prefabs pa las cosas? Enemy, Bomb?
+La idea era que los enemigos spawneen en posiciones random tambien.
+
+
+GameManager
+foreach (GameObject enemy in enemies)
+{
+	enemiesStatus.Add(enemy.GetComponent<EnemyStatus>());
+}
+Para?
+
+foreach (EnemyStatus enemyStatus in enemiesStatus)
+{
+	enemyStatus.onEnemyKilled = addPointsEnemyKilled;
+}
+No es mejor hacerlo static y ya?
+
+if (lastPlayerLives != playerStatus.getLives())
+{
+	lastPlayerLives = playerStatus.getLives();
+	if (lastPlayerLives <= 0)
+	{
+		canLose = true;
+	}
+	else
+	{
+		playerRespawn();
+	}
+	playerCollision.switchToFalse();
+}
+Veamos esto en clase.
+roundWon y roundLost son virtualmente iguales.
+
+Cual viene a ser el sentido de separar cada objeto en sus colisiones, movimientos, status? (player, enemy, bomb)
+
+RandomWallLocation
+Magic Numbers?
+
+while (randomLocationIndexX % 2 == 0 && randomLocationIndexZ % 2 == 0)
+{
+	randomLocationIndexX = Random.Range(-19, 20);
+	randomLocationIndexZ = Random.Range(-1, 10);
+}
+Evitar while que depende de un Random.
+
+
+
+
+
+
+
+
+

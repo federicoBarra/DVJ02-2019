@@ -1,0 +1,29 @@
+1. Crear un GameObject con un Collider y Rigidbody
+	Este GO deberá tener un enum que defina a la entidad como player, enemy o static object.
+	Esta entidad deberá tener un CustomEditor que me mostrará opciones diferentes en el inspector usando su respectivo enum.
+	Además estos enum deberán:
+		Para el enum player el GO deberá activar todos los componentes.
+		Para el enum enemy el GO deberá tener desactivado el Rigidbody.
+		Para el enum static object el GO deberá tener el rigidbody en kinematic.
+
+	Este CustomEditor deberá tener un toggle de help que mostrará un texto con lo descripto arriba.
+	El estado de ese toggle deberá ser el mismo para todos los objetos que tengan el mismo componente.
+	//tip: ver EditorPrefs
+
+2. Crear un Editor Window. Esta ventana deberá:
+	1. Crear 5 texturas con 5 colores diferentes.
+		//tip: ver métodos de AssetDatabase
+	2. Crear 5 materiales y asignarles las texturas anteriormente creadas.
+	
+	3. Generar un nivel randomico de GameObjects. 
+		Estos GOs deberán tener los componentes necesarios para usar materiales creados anteriormente. Los colores se les setearán automaticamente.
+		//tip: GameObject.CreatePrimitive()
+
+4. USA VEZ TERMINADOS LOS ANTERIORES (difícil!)
+	Crear un objeto que, al darle play a la escena, siga una curva de bezier. 
+	Para esto deberán implementar una función matématica del tipo:
+
+	Vector3 GetBezierPoint(Vector3 p0, Vector3 t0, Vector3 p1, Vector3 t1, float time) //(simple! 4 puntos: punto inicial, punto final y sus respectivas tangentes)
+	
+	//tip: https://en.wikipedia.org/wiki/B%C3%A9zier_curve
+	//tip: unity Handles

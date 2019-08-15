@@ -1,0 +1,1012 @@
+fileFormatVersion: 2
+guid: c7300421071728d46bc12d5ea176d2d5
+timeCreated: 1528008902
+licenseType: Pro
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: businessof ragespritesheet_0
+    21300002: businessof ragespritesheet_1
+    21300004: businessof ragespritesheet_2
+    21300006: businessof ragespritesheet_3
+    21300008: businessof ragespritesheet_4
+    21300010: businessof ragespritesheet_5
+    21300012: businessof ragespritesheet_6
+    21300014: businessof ragespritesheet_7
+    21300016: businessof ragespritesheet_8
+    21300018: businessof ragespritesheet_9
+    21300020: businessof ragespritesheet_10
+    21300022: businessof ragespritesheet_11
+    21300024: businessof ragespritesheet_12
+    21300026: businessof ragespritesheet_13
+    21300028: businessof ragespritesheet_14
+    21300030: businessof ragespritesheet_15
+    21300032: businessof ragespritesheet_16
+    21300034: businessof ragespritesheet_17
+    21300036: businessof ragespritesheet_18
+    21300038: businessof ragespritesheet_19
+    21300040: businessof ragespritesheet_20
+    21300042: businessof ragespritesheet_21
+    21300044: businessof ragespritesheet_22
+    21300046: businessof ragespritesheet_23
+    21300048: businessof ragespritesheet_24
+    21300050: businessof ragespritesheet_25
+    21300052: businessof ragespritesheet_26
+    21300054: businessof ragespritesheet_27
+    21300056: businessof ragespritesheet_28
+    21300058: businessof ragespritesheet_29
+    21300060: businessof ragespritesheet_30
+    21300062: businessof ragespritesheet_31
+    21300064: businessof ragespritesheet_32
+    21300066: businessof ragespritesheet_33
+    21300068: businessof ragespritesheet_34
+    21300070: businessof ragespritesheet_35
+    21300072: businessof ragespritesheet_36
+    21300074: businessof ragespritesheet_37
+    21300076: businessof ragespritesheet_38
+    21300078: businessof ragespritesheet_39
+    21300080: businessof ragespritesheet_40
+    21300082: businessof ragespritesheet_41
+    21300084: businessof ragespritesheet_42
+    21300086: businessof ragespritesheet_43
+    21300088: businessof ragespritesheet_44
+    21300090: businessof ragespritesheet_45
+    21300092: businessof ragespritesheet_46
+    21300094: businessof ragespritesheet_47
+    21300096: businessof ragespritesheet_48
+    21300098: businessof ragespritesheet_49
+    21300100: businessof ragespritesheet_50
+    21300102: businessof ragespritesheet_51
+    21300104: businessof ragespritesheet_52
+    21300106: businessof ragespritesheet_53
+    21300108: businessof ragespritesheet_54
+    21300110: businessof ragespritesheet_55
+    21300112: businessof ragespritesheet_56
+    21300114: businessof ragespritesheet_57
+    21300116: businessof ragespritesheet_58
+    21300118: businessof ragespritesheet_59
+    21300120: businessof ragespritesheet_60
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 50
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: businessof ragespritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 650
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: businessof ragespritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 650
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: businessof ragespritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 650
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: businessof ragespritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 650
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: businessof ragespritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 650
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: businessof ragespritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 650
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: businessof ragespritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 600
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: businessof ragespritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 600
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: businessof ragespritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 600
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: businessof ragespritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 600
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: businessof ragespritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 600
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: businessof ragespritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 550
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: businessof ragespritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 550
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: businessof ragespritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 550
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: businessof ragespritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 550
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: businessof ragespritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 500
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: businessof ragespritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 500
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: businessof ragespritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 500
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: businessof ragespritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 500
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: businessof ragespritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 500
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: businessof ragespritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 450
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: businessof ragespritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 450
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: businessof ragespritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 450
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: businessof ragespritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 450
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: businessof ragespritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 400
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: businessof ragespritesheet_25
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 400
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: businessof ragespritesheet_26
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 400
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: businessof ragespritesheet_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 350
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: businessof ragespritesheet_28
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 350
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: businessof ragespritesheet_29
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 350
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: businessof ragespritesheet_30
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 350
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: businessof ragespritesheet_31
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 350
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: businessof ragespritesheet_32
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 350
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: businessof ragespritesheet_33
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 350
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: businessof ragespritesheet_34
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 350
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: businessof ragespritesheet_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 300
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: businessof ragespritesheet_36
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 300
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: businessof ragespritesheet_37
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 300
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: businessof ragespritesheet_38
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 300
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: businessof ragespritesheet_39
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 300
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: businessof ragespritesheet_40
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 300
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: businessof ragespritesheet_41
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 300
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: businessof ragespritesheet_42
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 300
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: businessof ragespritesheet_43
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 300
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: businessof ragespritesheet_44
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 300
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: businessof ragespritesheet_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 250
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: businessof ragespritesheet_46
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 250
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: businessof ragespritesheet_47
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 200
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: businessof ragespritesheet_48
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 200
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: businessof ragespritesheet_49
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 200
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: businessof ragespritesheet_50
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 200
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: businessof ragespritesheet_51
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 200
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: businessof ragespritesheet_52
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 200
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: businessof ragespritesheet_53
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 200
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: businessof ragespritesheet_54
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 200
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: businessof ragespritesheet_55
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 200
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: businessof ragespritesheet_56
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 200
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: businessof ragespritesheet_57
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 200
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: businessof ragespritesheet_58
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 200
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: businessof ragespritesheet_59
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 200
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: businessof ragespritesheet_60
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 200
+        width: 50
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: characters
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

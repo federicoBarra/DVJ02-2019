@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace DVJ02.Clase07
+namespace DVJ02.Clase09
 {
 public class PlayerProfile : MonoBehaviour
 {

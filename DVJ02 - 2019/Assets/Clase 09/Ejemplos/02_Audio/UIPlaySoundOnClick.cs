@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace DVJ02.Clase07
+namespace DVJ02.Clase09
 {
 public class UIPlaySoundOnClick : MonoBehaviour
 {
