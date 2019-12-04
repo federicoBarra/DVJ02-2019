@@ -4,7 +4,7 @@ namespace DVJ02.Clase09
 {
 public class PlayerProfile : MonoBehaviour
 {
-
+	//test
     static PlayerProfile instance;
 
     public static PlayerProfile Get()
