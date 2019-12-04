@@ -4,6 +4,7 @@ namespace DVJ02.Clase09
 {
 public class SoundManager : MonoBehaviour
 {
+	//test 02
     private AudioSource audioSource;
     private static SoundManager instance;
     [Header("Sound Options")] 
